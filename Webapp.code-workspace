@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Webapp",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Webapp"
+	}
+}
