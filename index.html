@@ -1,84 +1,319 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello, World</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MARCA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    .agenda .btn {
+      border-radius: 0;
+      margin-right: 5px;
+    }
+
+    .noticia-principal img {
+      width: 100%;
+      height: auto;
+    }
+
+    .noticia-secundaria img {
+      width: 100px;
+      height: auto;
+    }
+
+    .noticia-secundaria {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col bg-danger">
-                    Columna 1
-                </div>
-                <div class="col-md-8 bg-warning">
-                    Columna 2
+  <!-- Barra de Navegación -->
+  <!-- Barra blanca -->
+  <nav class="navbar navbar-expand-md bg-white py-2 border-bottom">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Sección izquierda -->
+      <div class="d-flex align-items-center gap-4">
+        <div class="d-flex align-items-center border-end pe-3">
+          <img src="/images/portada.jpg" alt="Portada" style="height: 30px;">
+          <span class="ms-2">Portada de Hoy</span>
+        </div>
+        <div class="d-flex align-items-center border-end pe-3">
+          <img src="/images/radiomarca.png" alt="Radio" style="height: 30px;">
+          <span class="ms-2">Radio MARCA</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <img src="/images/Fantasy.png" alt="Fantasy" style="height: 30px;">
+          <span class="ms-2">LaLiga Fantasy MARCA</span>
+        </div>
+      </div>
+      <!-- Logo central -->
+      <div class="d-flex align-items-center">
+        <img src="/images/marca.png" alt="Logo MARCA" style="height: 40px;">
+      </div>
+      <!-- Sección derecha -->
+      <div class="d-flex align-items-center gap-2">
+        <img src="/img/españa.png" alt="Idioma" style="height: 20px;">
+        <button class="btn btn-danger btn-sm">Suscríbete</button>
+        <button class="btn btn-outline-danger btn-sm">Iniciar Sesión</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Barra roja -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-danger py-1">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">MARCA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="#">Fútbol</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Baloncesto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Motor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Polideportivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Más+</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Logos de equipos -->
+  <nav class="navbar navbar-expand-md bg-light py-2">
+    <div class="container-fluid d-flex flex-wrap gap-3 justify-content-center align-items-center">
+      <img src="/laliga/alaves.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/athletic.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/atlmadrid.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/barcelona.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/betis.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/celta.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/elche.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/espanyol.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/getafe.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/girona.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/levante.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/mallorca.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/osasuna.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/rayovallecano.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/realMadrid.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/realoviedo.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/realsociedad.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/sevilla.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/valencia.png" alt="Team" style="height: 30px;">
+      <img src="/laliga/villarreal.png" alt="Team" style="height: 30px;">
+      <img src="/images/apuestas.png" alt="Apuestas" style="height: 30px;">
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="container my-4">
+
+    <!-- Banner publicidad -->
+    <div class="mb-4 text-center">
+      <img src="images/caliente.jpg" alt="Anuncio" class="img-fluid w-50">
+    </div>
+
+    <!-- Agenda -->
+    <div class="agenda d-flex align-items-center mb-3">
+      <h5 class="me-3">Agenda</h5>
+      <button class="btn btn-danger btn-sm">En directo</button>
+      <button class="btn btn-light btn-sm">Última hora</button>
+      <button class="btn btn-danger btn-sm">Lo mejor del día</button>
+      <button class="btn btn-light btn-sm">Agenda Jueves 23</button>
+      <div class="ms-auto">
+        <a href="#" class="text-muted small">Ver más directos ▼</a>
+      </div>
+    </div>
+
+    <!-- Noticia principal + secundarias -->
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-8 noticia-principal">
+      <div class="card border-0 position-relative">
+        <img src="images/once.jpg" class="card-img" alt="Noticia principal">
+        <span class="badge bg-primary position-absolute top-0 start-0 m-3">CHAMPIONS</span>
+        <div class="card-img-overlay d-flex flex-column justify-content-end text-white">
+          <h5>Descubre a los ocho grandes favoritos</h5>
+          <h2 class="fw-bold">¿Cuál es el mejor once para reinar en Europa?</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="noticia-secundaria d-flex mb-3">
+        <img src="images/huelga.jpg" alt="Noticia secundaria" class="me-2" style="width: 100px;">
+        <div>
+          <span class="text-primary fw-bold small">LALIGA SANTANDER</span>
+          <p class="mb-1">Amenaza de huelga</p>
+          <small class="text-muted">306 comentarios</small>
+        </div>
+      </div>
+
+      <div class="noticia-secundaria d-flex mb-3 pt-2 border-top">
+        <img src="images/fichajes.jpg" alt="Noticia secundaria" class="me-2" style="width: 100px;">
+        <div>
+          <span class="text-info fw-bold small">FICHAJES</span>
+          <p class="mb-1">Mercado: el 'recambio' de Filipe Luis puede llegar de Alemania</p>
+          <small class="text-muted">92 comentarios</small>
+        </div>
+      </div>
+
+      <div class="noticia-secundaria d-flex mb-3 pt-2 border-top">
+        <img src="images/madrid.jpg" alt="Noticia secundaria" class="me-2" style="width: 100px;">
+        <div>
+          <span class="text-primary fw-bold small">REAL MADRID</span>
+          <p class="mb-1">Champions y Liga para el portero titular</p>
+          <small class="text-muted">206 comentarios</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-3 mt-2">
+    <div class="col-md-4">
+      <div class="card h-100 border-0">
+        <img src="images/alli.jpg" class="card-img-top" alt="Subnoticia 1">
+        <div class="card-body border-bottom">
+          <span class="badge bg-primary position-absolute top-0 start-0 m-3">LALIGA SANTANDER</span>
+          <h6 class="card-title">Felix Orode, el jugador nigeriano explica el festejo de Dele Alli</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0">
+        <img src="images/cr7.jpg" class="card-img-top" alt="Subnoticia 2">
+        <div class="card-body border-bottom">
+          <span class="badge bg-primary position-absolute top-0 start-0 m-3">Juventus</span>
+          <h6 class="card-title">Cristiano habla sobre cuadrado y la cesión del número 7</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0">
+        <img src="images/alva.jpg" class="card-img-top" alt="Subnoticia 3">
+        <div class="card-body border-bottom">
+          <span class="badge bg-primary position-absolute top-0 start-0 m-3">Liga MX</span>
+          <h6 class="card-title">El jugador estrella que hace soñar al Cruz Azul</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Contenido principal -->
+<div class="container my-4">
+  <div class="row g-3">
+    <!-- Noticia principal -->
+    <div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card border-0">
+                <img src="images/images.jpg" class="card-img-bottom w-50" alt="Noticia principal">
+                <div class="card-body">
+                    <span class="badge bg-primary">Liga SANTANDER</span>
+                    <h5 class="fw-bold mt-2">Reunión AFE</h5>
+                    <p class="text-muted small"></p>
                 </div>
             </div>
         </div>
-        <div class="container text-center bg-secondary">
-            <div class="row">
-                <div class="col-12">
-                    <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi corporis deleniti fugit
-                        molestias fuga, quam asperiores? Laboriosam fugiat a ab ipsam temporibus reiciendis inventore
-                        facilis velit eos? Qui at error magnam! Praesentium accusamus odio eius consequatur, reiciendis
-                        tenetur iste? Dolores, reiciendis illo minus autem laborum repellat culpa itaque minima
-                        asperiores possimus molestiae eius at tenetur! Laborum provident quidem consequuntur quia,
-                        suscipit officiis amet nam harum nemo minima dignissimos magni tempora neque voluptatum ducimus.
-                        In consequatur officiis ipsa, et ipsam laborum qui tempore sed asperiores repudiandae quis, sint
-                        perferendis earum maxime explicabo veritatis fuga architecto hic nesciunt cumque incidunt
-                        eligendi.</p>
+
+        <div class="col-md-4">
+            </div>
+
+        <div class="col-md-4">
+            <div class="card border-0">
+                <img src="images/drax.jpg" class="card-img-top w-50" alt="Noticia México">
+                <div class="card-body">
+                    <span class="badge bg-primary">Sevilla FC</span>
+                    <h5 class="fw-bold mt-2">Draxler y Martial nombres fuertes en el mercado</h5>
+                    <p class="text-muted small">Rocio Guevara Sevilla</p>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 bg-success">
-                    <h1>Titulo 1</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi corporis deleniti fugit
-                        molestias fuga, quam asperiores? Laboriosam fugiat a ab ipsam temporibus reiciendis inventore
-                        facilis velit eos? Qui at error magnam! Praesentium accusamus odio eius consequatur, reiciendis
-                        tenetur iste? Dolores, reiciendis illo minus autem laborum repellat culpa itaque minima
-                        asperiores possimus molestiae eius at tenetur! Laborum provident quidem consequuntur quia,
-                        suscipit officiis amet nam harum nemo minima dignissimos magni tempora neque voluptatum ducimus.
-                        In consequatur officiis ipsa, et ipsam laborum qui tempore sed asperiores repudiandae quis, sint
-                        perferendis earum maxime explicabo veritatis fuga architecto hic nesciunt cumque incidunt
-                        eligendi.</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 bg-info">
-                    <h1>Titulo 2</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi corporis deleniti fugit
-                        molestias fuga, quam asperiores? Laboriosam fugiat a ab ipsam temporibus reiciendis inventore
-                        facilis velit eos? Qui at error magnam! Praesentium accusamus odio eius consequatur, reiciendis
-                        tenetur iste? Dolores, reiciendis illo minus autem laborum repellat culpa itaque minima
-                        asperiores possimus molestiae eius at tenetur! Laborum provident quidem consequuntur quia,
-                        suscipit officiis amet nam harum nemo minima dignissimos magni tempora neque voluptatum ducimus.
-                        In consequatur officiis ipsa, et ipsam laborum qui tempore sed asperiores repudiandae quis, sint
-                        perferendis earum maxime explicabo veritatis fuga architecto hic nesciunt cumque incidunt
-                        eligendi.</p>
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 bg-success">
-                    <h1>Titulo 3</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi corporis deleniti fugit
-                        molestias fuga, quam asperiores? Laboriosam fugiat a ab ipsam temporibus reiciendis inventore
-                        facilis velit eos? Qui at error magnam! Praesentium accusamus odio eius consequatur, reiciendis
-                        tenetur iste? Dolores, reiciendis illo minus autem laborum repellat culpa itaque minima
-                        asperiores possimus molestiae eius at tenetur! Laborum provident quidem consequuntur quia,
-                        suscipit officiis amet nam harum nemo minima dignissimos magni tempora neque voluptatum ducimus.
-                        In consequatur officiis ipsa, et ipsam laborum qui tempore sed asperiores repudiandae quis, sint
-                        perferendis earum maxime explicabo veritatis fuga architecto hic nesciunt cumque incidunt
-                        eligendi.</p>
-                </div>
-            </div>
+    </div>
+</div>
+
+   <div class="d-flex align-items-center mb-3 border-top border-bottom border-3 p-2 mt-4">
+    <span class="text-muted small me-2">Es noticia:</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Mercado de fichajes</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Rodrigo</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Fernando Alonso</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Lewandowski</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Usain Bolt</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Donald Trump</a>
+    <span class="text-muted small me-2">|</span>
+    <a href="#" class="text-dark text-decoration-none small me-2">Calendario Liga</a>
+</div>
+
+  
+<div class="row g-3 mt-2">
+    <div class="col-md-4">
+      <div class="card h-100 border-0">
+        <img src="images/lunin.jpg" class="card-img-top" style="width: 75%; height: auto; margin: 0 auto; display: block;" alt="Subnoticia 1">
+        <div class="card-body border-bottom">
+          <span class="badge bg-primary position-absolute top-0 start-0 m-3">Real Madrid</span>
+          <h6 class="card-title">Lunin cedido a otro club</h6>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0">
+        <img src="images/rodri.jpg" class="card-img-top" style="width: 75%; height: auto; margin: 0 auto; display: block;" alt="Subnoticia 2">
+        <div class="card-body border-bottom">
+          <span class="badge bg-primary position-absolute top-0 start-0 m-3">Real Madrid</span>
+          <h6 class="card-title">¿Qué le pasa a Rodrigo?</h6>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white mt-5 p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <h6>Ocio y Media</h6>
+          <ul class="list-unstyled">
+            <li>Tramilillas</li>
+            <li>MDM: Media</li>
+            <li>Programación TV</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <h6>Unidad Editorial</h6>
+          <ul class="list-unstyled">
+            <li>El Mundo</li>
+            <li>Expansión</li>
+            <li>Diario Médico</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mt-3 mt-md-0">
+          <h6>Formación y Empleo</h6>
+          <ul class="list-unstyled">
+            <li>Escuela Unidad Editorial</li>
+            <li>Expansión y Empleo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <small>&copy; Unidad Editorial Información Deportiva, S.L.U. - Agosto 2018</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
